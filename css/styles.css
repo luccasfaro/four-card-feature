@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root {
+   --_font-main: 'Poppins', sans-serif;
+
+   --color-team-builder: hsl(0, 78%, 62%);
+   --color-supervisor: hsl(180, 62%, 55%);
+   --color-karma: hsl(34, 97%, 64%);
+   --color-calculator: hsl(212, 86%, 64%);
+   --title: hsl(234, 12%, 34%);
+   --paragraph: hsl(229, 6%, 66%);
+   --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: var(--_font-main);
+}
+
+/* Main Content */
+
+#container {
+   min-height: 100vh;
+   display: flex;
+   /* flex-direction: column; */
+   justify-content: center;
+   align-items: center;
+}
+
+#content {
+   width: 1300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+   padding: 1em;
+   flex-flow: column wrap;
+}
+
+/* Description */
+
+#description {
+   width: 60%;
+   text-align: center;
+   padding: 2em 1em;
+}
+#description h2 {
+   font-size: 2.3em;
+   color: var(--title);
+   font-weight: 300;
+}
+#description h3 {
+   font-size: 2.5em;
+   color: var(--title);
+   font-weight: 600;
+   margin-bottom: .8em;
+}
+#description p {
+   color: var(--paragraph);
+   font-size: 1.1em;
+}
+
+/* Tools */
+
+#tools {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 2em;
+   padding: 1em;
+}
+
+.tools-side {
+   width: 30%;
+}
+
+.tools-center {
+   width: 30%;
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+}
+
+.tools-description {
+   border-radius: 15px;
+   box-shadow: 0px 10px 7px rgba(0, 0, 0, .1);
+   display: flex;
+   flex-direction: column;
+}
+.tools-description .top-bar-tools {
+   height: 6px;
+   border-radius: 15px 15px 0 0;
+}
+#supervisor-bar {
+   background-color: var(--color-supervisor);
+}
+#team-builder-bar {
+   background-color: var(--color-team-builder);
+}
+#karma-bar {
+   background-color: var(--color-karma);
+}
+#calculator-bar {
+background-color: var(--color-calculator);
+}
+.tools-description-content {
+   padding: 2em;
+   display: flex;
+   flex-flow: column wrap;
+   gap: 1em;
+}
+.tools-description h2 {
+   font-size: 1.4em;
+   color: var(--title);
+}
+.tools-description p {
+   font-size: 1em;
+   color: var(--paragraph);
+}
+.img-tool {
+   display: flex;
+   justify-content: flex-end;
+}
+
+@media (max-width: 850px) {
+   #content {
+      /* gap: 2em; */
+   }
+
+   #description{
+      width: 100%;
+   }
+   #description h2 {
+      font-size: 1.8em;
+   }
+   #description h3 {
+      font-size: 1.9em;
+   }
+
+   #tools {
+      flex-direction: column;
+   }
+   .tools-side,
+   .tools-center {
+      width: 100%;
+   }
+}
+
+@media (max-width: 450px) {
+   #description h2 {
+      font-size: 1.4em;
+   }
+   #description h3 {
+      font-size: 1.5em;
+   }
+}
